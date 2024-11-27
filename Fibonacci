@@ -1,0 +1,21 @@
+package aula09;
+
+public class Fibonacci {
+public static void main (String [] args) {
+	
+	//Declaração de Variáveis
+	long penultimo = 0;
+	long ultimo = 1;
+	long atual = 0;
+	
+	// Processamento
+	System.out.println(1);
+	while (atual < 1000000) {
+	atual = penultimo + ultimo;
+	System.out.println(atual);
+	
+	penultimo = ultimo;
+	ultimo = atual;
+		}
+	}
+}
