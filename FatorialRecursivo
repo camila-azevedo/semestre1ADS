@@ -1,0 +1,35 @@
+package aula15;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class FatorialRecursivo {
+	static double calcularFatorial(double numero) {
+		 if (numero <= 1) {
+			 return  1;
+		 } 
+		 return (numero * calcularFatorial(numero - 1));
+		 }
+	
+	static double lerNumeroDoTeclado() {
+		BufferedReader leitor = new BufferedReader(new InputStreamReader(System.in));
+		
+		double retorno = 0; 
+		try {
+			System.out.print("Digite um número: ");
+			retorno = Double.parseDouble(leitor.readLine());	
+		} catch (Exception e) {}
+		 return retorno;
+	}
+	
+	public static void main (String[]args) {
+		// Declaração de Variáveis
+		double numero = 0;
+		
+		// Entada de dados
+		numero = lerNumeroDoTeclado();
+		
+		// Processamento
+		System.out.println("O fatorial do número é  " + calcularFatorial(numero));
+	}
+}
