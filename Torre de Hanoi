@@ -1,0 +1,17 @@
+package aula15;
+
+public class TorreHanoi {
+	static void mover(int disco, String origem, String meio, String destino) {
+		if (disco <= 0) {
+			return;
+		}
+		mover(disco - 1, origem, destino, meio);
+		System.out.println("Disco " + disco + " de " + origem + " para " + destino);
+		
+		mover(disco - 1, meio, origem, destino);
+	}
+	
+	public static void main (String [] args) {
+		mover (3, "Origem" , "Meio" , "Destino");
+	}
+}
